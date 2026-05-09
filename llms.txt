@@ -1,0 +1,32 @@
+# CarmelSolv
+
+> CarmelSolv is a U.S.-based distributor of high-purity specialty solvents and chemical intermediates, bridging world-class manufacturing with the American market. We supply battery-grade carbonates, industrial solvents, USP-grade glycols, flavor esters, and bio-based succinic acid with reliable domestic inventory and fast lead times.
+
+## Company
+
+- Headquarters: Jersey City, NJ, USA
+- Specialty: Carbonate solvents, glycol ethers, propionate esters, dicarboxylic acids
+- Markets served: Battery / energy storage, pharmaceuticals, food & flavor, industrial coatings, specialty chemicals
+- Contact: https://www.carmelsolv.com/#contact
+
+## Products
+
+- [Dimethyl Carbonate (DMC)](https://www.carmelsolv.com/products/dimethyl-carbonate.html) — CAS 616-38-6. Industrial and battery-grade (≥99.99%). Low-toxicity solvent, lithium-ion electrolyte component, phosgene-free carbonylation reagent.
+- [Propylene Carbonate (PC)](https://www.carmelsolv.com/products/propylene-carbonate.html) — CAS 108-32-7. Industrial and battery-grade (≥99.9%). Non-flammable (flash point 132°C), Na-ion and Li-ion electrolyte solvent, NMP/DCM replacement.
+- [Ethylene Carbonate (EC)](https://www.carmelsolv.com/products/ethylene-carbonate.html) — CAS 96-49-1. Industrial and battery-grade (≥99.95%). Solid at room temperature, highest dielectric constant (ε=90.5) of common carbonates, essential SEI-forming electrolyte component.
+- [Ethyl Methyl Carbonate (EMC)](https://www.carmelsolv.com/products/ethyl-methyl-carbonate.html) — CAS 623-53-0. Industrial and battery-grade (≥99.99%). Melting point -55°C, critical for cold-weather EV battery performance.
+- [Diethyl Carbonate (DEC)](https://www.carmelsolv.com/products/diethyl-carbonate.html) — CAS 105-58-8. Industrial and battery-grade (≥99.99%). ICH Q3C Class 3 pharma solvent, nitrocellulose solvent, EC/DMC/DEC electrolyte formulations.
+- [Propylene Glycol Industrial](https://www.carmelsolv.com/products/propylene-glycol-industrial.html) — CAS 57-55-6. Industrial grade ≥99.5%. Antifreeze, de-icing fluids, HVAC heat transfer, polymer intermediate.
+- [Propylene Glycol USP](https://www.carmelsolv.com/products/propylene-glycol-usp.html) — CAS 57-55-6. USP-NF/FCC grade. FDA GRAS (21 CFR 184.1666), EU E1520. Pharmaceutical excipient, food humectant, cosmetics, e-liquid base.
+- [Methyl Propionate](https://www.carmelsolv.com/products/methyl-propionate.html) — CAS 554-12-1. Technical and flavor/fragrance grade. FEMA GRAS 2752, fast-evaporating coatings solvent, MMA synthesis feedstock (Lucite Alpha process).
+- [Ethyl Propionate](https://www.carmelsolv.com/products/ethyl-propionate.html) — CAS 105-37-3. Technical and flavor/fragrance grade. FEMA GRAS 2456, nitrocellulose solvent, fruity pineapple-rum flavor.
+- [Propyl Propionate](https://www.carmelsolv.com/products/propyl-propionate.html) — CAS 106-36-5. Technical and flavor/fragrance grade. NON-HAP (not listed under Clean Air Act §112), coating retarder solvent, FEMA GRAS 2958.
+- [Succinic Acid](https://www.carmelsolv.com/products/succinic-acid.html) — CAS 110-15-6. Industrial, food (FCC/E363), and pharmaceutical (USP/Ph.Eur) grades. Bio-based via fermentation, PBS biodegradable polymer monomer, pharmaceutical succinate salts.
+
+## Key Differentiators
+
+- Battery-grade carbonates with moisture ≤30 ppm and metals ≤1 ppm for Li-ion and Na-ion electrolyte applications
+- USP/FCC/food-grade products with full pharmacopeia compliance documentation
+- NON-HAP solvents for MACT-regulated coating manufacturers
+- Bio-based succinic acid with renewable credentials
+- Domestic U.S. inventory with fast lead times vs. direct import
