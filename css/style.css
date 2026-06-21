@@ -46,6 +46,7 @@ nav {
 }
 .nav-inner {
   display: flex;
+  position: relative;
   align-items: center;
   justify-content: space-between;
   padding: 18px 24px;
@@ -65,6 +66,36 @@ nav {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--white); }
+
+/* Mobile nav toggle (hidden on desktop, shown ≤640px) */
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 42px;
+  height: 42px;
+  padding: 0 10px;
+  align-self: center;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--text-secondary);
+  border-radius: 2px;
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+.nav-toggle:hover { border-color: var(--accent); }
+.nav-toggle:hover span { background: var(--white); }
+nav.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg); background: var(--accent); }
+nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
+nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: var(--accent); }
 
 /* ── Hero ── */
 .hero {
@@ -324,7 +355,29 @@ footer a:hover { color: var(--accent); }
 
 /* ── Responsive ── */
 @media (max-width: 640px) {
-  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav-links {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 24px 16px;
+    background: rgba(11, 21, 38, 0.98);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border);
+    display: none;
+  }
+  nav.open .nav-links { display: flex; }
+  .nav-links li { width: 100%; }
+  .nav-links a {
+    display: block;
+    padding: 14px 0;
+    font-size: 1rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .nav-links li:last-child a { border-bottom: none; }
   .hero { padding: 64px 20px 56px; }
   .contact-box { padding: 32px 20px; }
   .btn-outline { display: none; }

@@ -55,7 +55,10 @@
 <nav>
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><img src="logo.png" alt="CARMELSOLV™ — U.S. Carbonate Solvent Supplier"></a>
-    <ul class="nav-links">
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="nav-links">
       <li><a href="#about">Philosophy</a></li>
       <li><a href="#products">Products</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -283,5 +286,6 @@
     }
   }
 </script>
+<script src="js/nav.js" defer></script>
 </body>
 </html>
