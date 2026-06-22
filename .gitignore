@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Secrets — contains FTP credentials, never commit
+deploy.sh
+
+# Internal review docs
+SEO-REVIEW.md
+seo-review-deepseek.md

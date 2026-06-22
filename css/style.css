@@ -382,3 +382,45 @@ footer a:hover { color: var(--accent); }
   .contact-box { padding: 32px 20px; }
   .btn-outline { display: none; }
 }
+
+/* ── Product page TOC (floating side panel) ── */
+.product-toc {
+  position: fixed;
+  top: 100px;
+  right: 20px;
+  width: 150px;
+  z-index: 90;
+  display: none;            /* shown only on wide screens (see media query below) */
+  background: rgba(22, 32, 51, 0.72);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 14px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+@media (min-width: 1440px) { .product-toc { display: block; } }
+.product-toc .container { max-width: none; margin: 0; padding: 0; }
+.product-toc-label {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+.product-toc-list { display: flex; flex-direction: column; gap: 2px; list-style: none; }
+.product-toc-list a {
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  padding: 7px 10px;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+.product-toc-list a:hover { background: rgba(255, 255, 255, 0.06); color: var(--white); }
+
+/* Offset anchor jumps so the sticky nav doesn't cover the section heading */
+section[id] { scroll-margin-top: 20px; }
