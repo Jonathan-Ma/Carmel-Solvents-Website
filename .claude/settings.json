@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "carmelsolv": {
+      "type": "stdio",
+      "command": "node",
+      "args": ["mcp/server.js"],
+      "description": "CarmelSolv website project context — product catalog, blog conventions, design tokens, deployment, and SEO guidelines"
+    }
+  }
+}

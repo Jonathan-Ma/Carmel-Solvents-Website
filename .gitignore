@@ -7,6 +7,9 @@
 # Secrets — contains FTP credentials, never commit
 deploy.sh
 
+# Dependencies
+node_modules/
+
 # Internal review docs
 SEO-REVIEW.md
 seo-review-deepseek.md
