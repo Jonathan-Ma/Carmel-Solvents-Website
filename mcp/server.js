@@ -461,7 +461,129 @@ llms.txt, contact.php
 | Jan 20, 2026 | Introducing the Spot Stock Allocation Program | ssap_article |
 
 **Total: 21 posts** (includes "Where to Start" orientation post at blog/where-to-start.html)`,
+  
+  "project://conventions/category-pages": {
+    title: "Category Page Conventions",
+    mimeType: "text/markdown",
+    content: `# Category Page Conventions
+
+Used by all 4 category pages: \`carbonate-solvents.html\`, \`oleochemicals.html\`, \`surfactants.html\`, \`oem-odm-detergent-products.html\`.
+
+## Page Structure
+
+Each category page follows this skeleton (in order):
+1. **<head>** — GA4 tag, meta tags, OG tags, BreadcrumbList schema
+2. **<nav>** — identical across all pages; Products link points to \`index.html\`
+3. **Hero** — \`<section class="product-hero">\` with breadcrumb, H1, intro paragraph
+4. **Product Grid** — \`<section>\` with \`.prod-grid\` of \`.prod-card\` items
+5. **Applications** — optional \`<section>\` with \`.app-list\` of \`.app-tag\` pills
+6. **Documentation** — \`<section>\` with \`.doc-grid\` / \`.doc-item\` cards
+7. **RFQ Form** — \`<section id="quote">\` with Formspree \`.contact-form\`
+8. **Footer** — standard copyright + address
+
+## Product Card HTML Pattern
+
+\`\`\`html
+<div class="prod-card">
+  <div class="cas-badge">CAS XXXXXX-X</div>
+  <h3>Product Name</h3>
+  <div class="prod-aliases">Alias · Other Name · CAS XXXXXX-X</div>
+  <div class="prod-variants">
+    <div class="label">Variants / Grades</div>
+    <span class="variant-tag">Variant 1</span>
+  </div>
+  <div class="prod-apps">
+    <strong>Common applications:</strong> Description.
+  </div>
+  <div class="prod-docs">SDS, TDS, and COA available upon request.</div>
+  <a href="#quote" class="prod-cta">Request Quote</a>
+</div>
+\`\`\`
+
+## Product Card CSS (page-scoped <style> block)
+
+\`\`\`css
+.prod-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 24px; margin-top: 32px; }
+.prod-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; transition: border-color 0.2s, transform 0.2s; display: flex; flex-direction: column; }
+.prod-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.prod-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+.prod-aliases { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5; }
+.prod-variants .label { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); }
+.variant-tag { display: inline-block; background: rgba(200,146,42,0.08); border: 1px solid rgba(200,146,42,0.2); border-radius: 4px; padding: 4px 10px; font-size: 0.8rem; color: var(--text-secondary); margin: 0 6px 6px 0; }
+.prod-apps { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; flex: 1; margin-bottom: 16px; }
+.prod-docs { font-size: 0.75rem; color: var(--text-muted); margin-bottom: 16px; padding: 10px 14px; background: rgba(255,255,255,0.02); border-radius: 6px; border-left: 2px solid var(--border); }
+.prod-cta { display: inline-flex; align-items: center; justify-content: center; gap: 6px; background: var(--accent); color: var(--bg-primary); font-weight: 700; font-size: 0.85rem; padding: 10px 20px; border-radius: var(--radius); text-decoration: none; }
+.prod-cta:hover { background: var(--white); color: var(--bg-primary); }
+\`\`\`
+
+## Surfactants: Ion-Type Grouping
+
+Group under \`.type-section\` headers:
+\`\`\`html
+<div class="type-section">
+  <h3><span class="ion">Anionic</span> Surfactants</h3>
+  <div class="prod-grid">...</div>
+</div>
+\`\`\`
+
+## Key Rules
+
+- **No Chinese characters** — site is English-only. Removed 2026-07-11. Do NOT add Chinese.
+- **No emoji in headings** — removed from homepage cards. Keep headings text-only.
+- **Disclaimer on every page**: "All specifications are typical values. Final specifications confirmed at quotation."
+- **CAB naming**: Always "CAB — Cocamidopropyl Betaine", never "CAB/LAB".
+- **GMS and GML are separate** — never call GML a GMS grade.
+- **No "authorized distributor"** or **"FDA approved"** language.
+- **"pharmaceutical"** only as application context, never a grade claim.`,
   },
+
+  "project://conventions/homepage": {
+    title: "Homepage Structure",
+    mimeType: "text/markdown",
+    content: `# Homepage Structure
+
+## Sections (in order)
+1. **Nav** — sticky, links: Philosophy (#about), Products (products/), Blog (blog/), Contact (#contact)
+2. **Hero** — tagline, H1, CTA buttons
+3. **Why CARMELSOLV** — #about, 6 .why-card items
+4. **Products** — #products, 4 category cards in 4-column grid
+5. **Contact** — #contact, Formspree form
+6. **Footer** — copyright + address
+
+## Category Cards (Homepage)
+
+4 cards in \`grid-template-columns: repeat(4, 1fr)\`:
+
+\`\`\`html
+<div class="product-card" style="border-color: rgba(200,146,42,0.3); background: linear-gradient(135deg, #162033 0%, #1a2a3d 100%);">
+  <div class="product-cas">11 Products</div>
+  <h3>Carbonate Solvents &amp; Specialty Chemicals</h3>
+  <p>Description...</p>
+  <a href="products/carbonate-solvents.html" class="product-link">View Products →</a>
+</div>
+\`\`\`
+
+## Card Links
+- Carbonate Solvents → \`products/carbonate-solvents.html\`
+- Oleochemicals → \`products/oleochemicals.html\`
+- Surfactants → \`products/surfactants.html\`
+- OEM / ODM → \`products/oem-odm-detergent-products.html\`
+
+## Nav Convention for Sub-pages
+
+All sub-pages use:
+\`\`\`html
+<li><a href="../index.html#about">Philosophy</a></li>
+<li><a href="index.html">Products</a></li>
+<li><a href="../blog/">Blog</a></li>
+<li><a href="../index.html#contact">Contact</a></li>
+\`\`\`
+
+## No Chinese / No Emoji Rule
+
+English-only. Chinese removed 2026-07-11. Emoji removed from homepage cards. Do NOT add either back.`,
+  },
+},
 };
 
 // ─── Server Setup ───────────────────────────────────────────────────
