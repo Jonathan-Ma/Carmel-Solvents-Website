@@ -128,7 +128,7 @@
       <li><a href="#ethyl-propionate">Ethyl Propionate</a></li>
       <li><a href="#propyl-propionate">Propyl Propionate</a></li>
       <li><a href="#succinic-acid">Succinic Acid</a></li>
-      <li><a href="#quote">Request a Quote</a></li>
+      <li><a href="#quote">Get in Touch</a></li>
     </ul>
   </div>
 </nav>
@@ -326,12 +326,17 @@
   </div>
 </section>
 
+  <div class="container" style="padding-top:0;">
+    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.65;max-width:var(--max-w);margin:0 auto;text-align:center;padding:0 24px 40px;">
+      The information provided on this page is based on typical product data and is intended for general product evaluation only. It does not constitute a warranty, specification guarantee, regulatory determination, or confirmation of suitability for a particular application. Customers should review the applicable Safety Data Sheet and technical documentation and perform their own testing, safety assessment, and regulatory review before use.
+    </p>
+  </div>
+
 <section id="quote" style="background: var(--bg-secondary);">
   <div class="container">
     <div class="contact-box" style="max-width: 640px;">
-      <div class="section-label" style="text-align: center;">Get a Quote</div>
-      <h2>Request a Quote — Carbonate Solvents</h2>
-      <p>Tell us which products and grades you need. We'll respond with pricing, specs, and availability. Final specifications confirmed at quotation.</p>
+            <h2 style="color:var(--accent);">Get in Touch</h2>
+      
       <form action="https://formspree.io/f/xnjwgzdz" method="POST" class="contact-form">
         <div class="form-row">
           <div class="form-group">
@@ -355,21 +360,7 @@
         </div>
         <div class="form-group">
           <label for="product">Product of Interest</label>
-          <select id="product" name="product">
-            <option value="">Select a product…</option>
-            <option>Dimethyl Carbonate (DMC)</option>
-            <option>Propylene Carbonate (PC)</option>
-            <option>Ethylene Carbonate (EC)</option>
-            <option>Ethyl Methyl Carbonate (EMC)</option>
-            <option>Diethyl Carbonate (DEC)</option>
-            <option>Propylene Glycol (Industrial Grade)</option>
-            <option>Propylene Glycol (USP Grade)</option>
-            <option>Methyl Propionate</option>
-            <option>Ethyl Propionate</option>
-            <option>Propyl Propionate</option>
-            <option>Succinic Acid</option>
-            <option>Multiple / Other</option>
-          </select>
+          <input type="text" id="product" name="product" placeholder="e.g., DMC, SLES 70%, GMS">
         </div>
         <div class="form-group">
           <label for="message">Message *</label>

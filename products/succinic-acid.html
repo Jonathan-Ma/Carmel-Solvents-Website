@@ -419,11 +419,16 @@
   </div>
 </section>
 
+  <div class="container" style="padding-top:0;">
+    <p style="font-size:0.82rem;color:var(--text-muted);line-height:1.65;max-width:var(--max-w);margin:0 auto;text-align:center;padding:0 24px 40px;">
+      The information provided on this page is based on typical product data and is intended for general product evaluation only. It does not constitute a warranty, specification guarantee, regulatory determination, or confirmation of suitability for a particular application. Customers should review the applicable Safety Data Sheet and technical documentation and perform their own testing, safety assessment, and regulatory review before use.
+    </p>
+  </div>
+
 <section id="quote" style="background:var(--bg-secondary);border-top:1px solid var(--border)">
   <div class="container">
     <div class="contact-box" style="max-width:640px">
-      <div class="section-label" style="text-align:center">Get a Quote</div>
-      <h2>Request a Quote — Succinic Acid</h2>
+            <h2 style="color:var(--accent);">Get in Touch</h2>
       <p>Tell us your required grade, quantity, and application. We'll respond with pricing, SDS, COA, and availability.</p>
       <form action="https://formspree.io/f/xnjwgzdz" method="POST" class="contact-form">
         <div class="form-row">
@@ -433,20 +438,7 @@
         <div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required placeholder="your@email.com"></div>
         <div class="form-group">
           <label for="product">Product</label>
-          <select id="product" name="product">
-            <option>Succinic Acid</option>
-            <option>Dimethyl Carbonate (DMC)</option>
-            <option>Propylene Carbonate (PC)</option>
-            <option>Ethylene Carbonate (EC)</option>
-            <option>Ethyl Methyl Carbonate (EMC)</option>
-            <option>Diethyl Carbonate (DEC)</option>
-            <option>Propylene Glycol (Industrial Grade)</option>
-            <option>Propylene Glycol (USP Grade)</option>
-            <option>Methyl Propionate</option>
-            <option>Ethyl Propionate</option>
-            <option>Propyl Propionate</option>
-            <option>Multiple / Other</option>
-          </select>
+          <input type="text" id="product" name="product" placeholder="e.g., DMC, SLES 70%, GMS">
         </div>
         <div class="form-group"><label for="message">Message *</label><textarea id="message" name="message" required rows="4" placeholder="Grade required (industrial / food / pharma), quantity, application, or any questions"></textarea></div>
         <button type="submit" class="btn" style="width:100%">Send Request</button>
@@ -462,7 +454,7 @@
   </div>
 </footer>
 
-<a href="#quote" class="quote-pill">Request a Quote</a>
+<a href="#quote" class="quote-pill">Get in Touch</a>
 
 <script src="../js/nav.js" defer></script>
 </body>
