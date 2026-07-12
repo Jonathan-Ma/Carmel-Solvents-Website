@@ -51,6 +51,7 @@
       display: flex; flex-direction: column;
     }
     .prod-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.prod-card { scroll-margin-top: 5rem; }
     .prod-card .cas-badge { font-size: 0.68rem; font-weight: 600; letter-spacing: 0.08em; color: var(--accent); margin-bottom: 8px; }
     .prod-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
     .prod-card h3 a { color: var(--white); text-decoration: none; }
@@ -88,7 +89,15 @@
     </button>
     <ul class="nav-links" id="nav-links">
       <li><a href="../index.html#about">Philosophy</a></li>
-      <li><a href="index.html">Products</a></li>
+      <li class="nav-dropdown">
+      <a href="carbonate-solvents.html" class="dropdown-toggle">Products ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="carbonate-solvents.html">Carbonate Solvents</a></li>
+        <li><a href="oleochemicals.html">Oleochemicals</a></li>
+        <li><a href="surfactants.html">Surfactants</a></li>
+        <li><a href="oem-odm-detergent-products.html">OEM/ODM</a></li>
+      </ul>
+    </li>
       <li><a href="../blog/">Blog</a></li>
       <li><a href="../index.html#contact">Contact</a></li>
     </ul>
@@ -103,7 +112,28 @@
   </div>
 </section>
 
-<section>
+<!-- On this page -->
+<nav class="product-toc" aria-label="On this page">
+  <div class="container">
+    <span class="product-toc-label">On this page</span>
+    <ul class="product-toc-list">
+      <li><a href="#dimethyl-carbonate-dmc">Dimethyl Carbonate (DMC)</a></li>
+      <li><a href="#propylene-carbonate-pc">Propylene Carbonate (PC)</a></li>
+      <li><a href="#ethylene-carbonate-ec">Ethylene Carbonate (EC)</a></li>
+      <li><a href="#ethyl-methyl-carbonate-emc">Ethyl Methyl Carbonate (EMC)</a></li>
+      <li><a href="#diethyl-carbonate-dec">Diethyl Carbonate (DEC)</a></li>
+      <li><a href="#propylene-glycol-industrial">Propylene Glycol (Industrial)</a></li>
+      <li><a href="#propylene-glycol-usp-grade">Propylene Glycol (USP Grade)</a></li>
+      <li><a href="#methyl-propionate">Methyl Propionate</a></li>
+      <li><a href="#ethyl-propionate">Ethyl Propionate</a></li>
+      <li><a href="#propyl-propionate">Propyl Propionate</a></li>
+      <li><a href="#succinic-acid">Succinic Acid</a></li>
+      <li><a href="#quote">Request a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="products">
   <div class="container">
     <div class="section-label">Product Catalog</div>
     <h2 class="section-title">11 Products</h2>
@@ -111,7 +141,7 @@
 
     <div class="prod-grid">
 
-      <div class="prod-card">
+      <div class="prod-card" id="dimethyl-carbonate-dmc">
         <div class="cas-badge">CAS 616-38-6</div>
         <h3><a href="dimethyl-carbonate.html">Dimethyl Carbonate (DMC)</a></h3>
         <div class="prod-aliases">Carbonic acid dimethyl ester · Methyl carbonate · UN 1161</div>
@@ -128,7 +158,7 @@
         <a href="dimethyl-carbonate.html" class="prod-cta">Full Details &amp; Quote →</a>
       </div>
 
-      <div class="prod-card">
+      <div class="prod-card" id="propylene-carbonate-pc">
         <div class="cas-badge">CAS 108-32-7</div>
         <h3><a href="propylene-carbonate.html">Propylene Carbonate (PC)</a></h3>
         <div class="prod-aliases">4-Methyl-1,3-dioxolan-2-one · Cyclic propylene carbonate</div>
@@ -144,7 +174,7 @@
         <a href="propylene-carbonate.html" class="prod-cta">Full Details &amp; Quote →</a>
       </div>
 
-      <div class="prod-card">
+      <div class="prod-card" id="ethylene-carbonate-ec">
         <div class="cas-badge">CAS 96-49-1</div>
         <h3><a href="ethylene-carbonate.html">Ethylene Carbonate (EC)</a></h3>
         <div class="prod-aliases">1,3-Dioxolan-2-one · Cyclic ethylene carbonate · Solid at room temp</div>
@@ -160,7 +190,7 @@
         <a href="ethylene-carbonate.html" class="prod-cta">Full Details &amp; Quote →</a>
       </div>
 
-      <div class="prod-card">
+      <div class="prod-card" id="ethyl-methyl-carbonate-emc">
         <div class="cas-badge">CAS 623-53-0</div>
         <h3><a href="ethyl-methyl-carbonate.html">Ethyl Methyl Carbonate (EMC)</a></h3>
         <div class="prod-aliases">Carbonic acid ethyl methyl ester · EMC</div>
@@ -176,7 +206,7 @@
         <a href="ethyl-methyl-carbonate.html" class="prod-cta">Full Details &amp; Quote →</a>
       </div>
 
-      <div class="prod-card">
+      <div class="prod-card" id="diethyl-carbonate-dec">
         <div class="cas-badge">CAS 105-58-8</div>
         <h3><a href="diethyl-carbonate.html">Diethyl Carbonate (DEC)</a></h3>
         <div class="prod-aliases">Carbonic acid diethyl ester · Ethyl carbonate</div>
@@ -192,7 +222,7 @@
         <a href="diethyl-carbonate.html" class="prod-cta">Full Details &amp; Quote →</a>
       </div>
 
-      <div class="prod-card">
+      <div class="prod-card" id="propylene-glycol-industrial">
         <div class="cas-badge">CAS 57-55-6</div>
         <h3><a href="propylene-glycol-industrial.html">Propylene Glycol (Industrial)</a></h3>
         <div class="prod-aliases">1,2-Propanediol · PG Industrial · MPG</div>
@@ -207,7 +237,7 @@
         <a href="propylene-glycol-industrial.html" class="prod-cta">Full Details &amp; Quote →</a>
       </div>
 
-      <div class="prod-card">
+      <div class="prod-card" id="propylene-glycol-usp-grade">
         <div class="cas-badge">CAS 57-55-6</div>
         <h3><a href="propylene-glycol-usp.html">Propylene Glycol (USP Grade)</a></h3>
         <div class="prod-aliases">1,2-Propanediol USP · PG USP-NF · FCC</div>
@@ -223,7 +253,7 @@
         <a href="propylene-glycol-usp.html" class="prod-cta">Full Details &amp; Quote →</a>
       </div>
 
-      <div class="prod-card">
+      <div class="prod-card" id="methyl-propionate">
         <div class="cas-badge">CAS 554-12-1</div>
         <h3><a href="methyl-propionate.html">Methyl Propionate</a></h3>
         <div class="prod-aliases">Propanoic acid methyl ester · FEMA GRAS 2752</div>
@@ -239,7 +269,7 @@
         <a href="methyl-propionate.html" class="prod-cta">Full Details &amp; Quote →</a>
       </div>
 
-      <div class="prod-card">
+      <div class="prod-card" id="ethyl-propionate">
         <div class="cas-badge">CAS 105-37-3</div>
         <h3><a href="ethyl-propionate.html">Ethyl Propionate</a></h3>
         <div class="prod-aliases">Propanoic acid ethyl ester · FEMA GRAS 2456</div>
@@ -255,7 +285,7 @@
         <a href="ethyl-propionate.html" class="prod-cta">Full Details &amp; Quote →</a>
       </div>
 
-      <div class="prod-card">
+      <div class="prod-card" id="propyl-propionate">
         <div class="cas-badge">CAS 106-36-5</div>
         <h3><a href="propyl-propionate.html">Propyl Propionate</a></h3>
         <div class="prod-aliases">Propanoic acid propyl ester · FEMA GRAS 2958</div>
@@ -271,7 +301,7 @@
         <a href="propyl-propionate.html" class="prod-cta">Full Details &amp; Quote →</a>
       </div>
 
-      <div class="prod-card">
+      <div class="prod-card" id="succinic-acid">
         <div class="cas-badge">CAS 110-15-6</div>
         <h3><a href="succinic-acid.html">Succinic Acid</a></h3>
         <div class="prod-aliases">Butanedioic acid · Amber acid · E363</div>

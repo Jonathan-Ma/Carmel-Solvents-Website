@@ -98,6 +98,47 @@ nav.open .nav-toggle span:nth-child(1) { transform: translateY(7px) rotate(45deg
 nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
 nav.open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: var(--accent); }
 
+/* ── Nav Dropdown ── */
+.nav-dropdown { position: relative; }
+.dropdown-toggle { cursor: default; }
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: rgba(11, 21, 38, 0.98);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 0;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  z-index: 110;
+}
+.nav-dropdown:hover .dropdown-menu,
+.nav-dropdown:focus-within .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.dropdown-menu li { width: 100%; }
+.dropdown-menu a {
+  display: block;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  transition: color 0.2s, background 0.15s;
+}
+.dropdown-menu a:hover { color: var(--white); background: rgba(255,255,255,0.04); }
+
 /* ── Hero ── */
 .hero {
   padding: 96px 24px 80px;
@@ -389,7 +430,7 @@ footer a:hover { color: var(--accent); }
   position: fixed;
   top: 100px;
   right: 20px;
-  width: 150px;
+  width: 200px;
   z-index: 90;
   display: none;            /* shown only on wide screens (see media query below) */
   background: rgba(22, 32, 51, 0.72);
@@ -399,6 +440,7 @@ footer a:hover { color: var(--accent); }
   border-radius: var(--radius);
   padding: 16px 14px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+  line-height: 1.25;
 }
 @media (min-width: 1440px) { .product-toc { display: block; } }
 .product-toc .container { max-width: none; margin: 0; padding: 0; }
@@ -411,13 +453,14 @@ footer a:hover { color: var(--accent); }
   color: var(--accent);
   margin-bottom: 10px;
 }
-.product-toc-list { display: flex; flex-direction: column; gap: 2px; list-style: none; }
+.product-toc-list { display: flex; flex-direction: column; gap: 0; list-style: none; }
 .product-toc-list a {
   display: block;
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   font-weight: 500;
   color: var(--text-secondary);
-  padding: 7px 10px;
+  padding: 5px 10px;
+  line-height: 1.4;
   border-radius: 6px;
   transition: background 0.15s, color 0.15s;
 }

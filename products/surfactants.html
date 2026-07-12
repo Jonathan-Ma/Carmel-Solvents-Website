@@ -51,6 +51,7 @@
  display: flex; flex-direction: column;
  }
  .prod-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.prod-card { scroll-margin-top: 5rem; }
  .prod-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
  .prod-aliases { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5; }
  .prod-variants { margin-bottom: 14px; }
@@ -98,7 +99,15 @@
  </button>
  <ul class="nav-links" id="nav-links">
  <li><a href="../index.html#about">Philosophy</a></li>
- <li><a href="index.html">Products</a></li>
+ <li class="nav-dropdown">
+      <a href="carbonate-solvents.html" class="dropdown-toggle">Products ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="carbonate-solvents.html">Carbonate Solvents</a></li>
+        <li><a href="oleochemicals.html">Oleochemicals</a></li>
+        <li><a href="surfactants.html">Surfactants</a></li>
+        <li><a href="oem-odm-detergent-products.html">OEM/ODM</a></li>
+      </ul>
+    </li>
  <li><a href="../blog/">Blog</a></li>
  <li><a href="../index.html#contact">Contact</a></li>
  </ul>
@@ -114,8 +123,31 @@
  </div>
 </section>
 
+<!-- On this page -->
+<nav class="product-toc" aria-label="On this page">
+  <div class="container">
+    <span class="product-toc-label">On this page</span>
+    <ul class="product-toc-list">
+      <li><a href="#sodium-lauryl-ether-sulfate-sles">Sodium Lauryl Ether Sulfate (SLES)</a></li>
+      <li><a href="#dodecyl-benzenesulfonic-acid-labsa">Dodecyl Benzenesulfonic Acid (LABSA)</a></li>
+      <li><a href="#sodium-alpha-olefin-sulfonate-aos">Sodium Alpha-Olefin Sulfonate (AOS)</a></li>
+      <li><a href="#ammonium-lauryl-ether-sulfate-ales">Ammonium Lauryl Ether Sulfate (ALES)</a></li>
+      <li><a href="#ammonium-lauryl-sulfate-als">Ammonium Lauryl Sulfate (ALS)</a></li>
+      <li><a href="#sodium-lauryl-sulfate-sls">Sodium Lauryl Sulfate (SLS)</a></li>
+      <li><a href="#cab-cocamidopropyl-betaine">CAB — Cocamidopropyl Betaine</a></li>
+      <li><a href="#cocamidopropyl-amine-oxide-cao">Cocamidopropyl Amine Oxide (CAO)</a></li>
+      <li><a href="#fatty-acid-diethanolamide-cdea">Fatty Acid Diethanolamide (CDEA)</a></li>
+      <li><a href="#coconut-monoethanolamide-cmea">Coconut Monoethanolamide (CMEA)</a></li>
+      <li><a href="#alkyl-polyglucosides-apg">Alkyl Polyglucosides (APG)</a></li>
+      <li><a href="#primary-alcohol-ethoxylate-aeo">Primary Alcohol Ethoxylate (AEO)</a></li>
+      <li><a href="#liquid-sodium-silicate">Liquid Sodium Silicate</a></li>
+      <li><a href="#quote">Request a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
 <!-- Product Grid -->
-<section>
+<section id="products">
  <div class="container">
  <div class="section-label">Product Catalog</div>
  <h2 class="section-title">Surfactant Product Families</h2>
@@ -126,7 +158,7 @@
  <h3><span class="ion">Anionic</span> Surfactants</h3>
  <div class="prod-grid">
 
- <div class="prod-card">
+ <div class="prod-card" id="sodium-lauryl-ether-sulfate-sles">
  <h3>Sodium Lauryl Ether Sulfate (SLES)</h3>
  <div class="prod-aliases">AES · Sodium Laureth Sulfate · CAS 68891-38-3</div>
  <div class="prod-variants">
@@ -140,7 +172,7 @@
  <a href="#quote" class="prod-cta">Request Quote</a>
  </div>
 
- <div class="prod-card">
+ <div class="prod-card" id="dodecyl-benzenesulfonic-acid-labsa">
  <h3>Dodecyl Benzenesulfonic Acid (LABSA)</h3>
  <div class="prod-aliases">LAS · Linear Alkylbenzene Sulfonic Acid · CAS 27176-87-0</div>
  <div class="prod-variants">
@@ -154,7 +186,7 @@
  <a href="#quote" class="prod-cta">Request Quote</a>
  </div>
 
- <div class="prod-card">
+ <div class="prod-card" id="sodium-alpha-olefin-sulfonate-aos">
  <h3>Sodium Alpha-Olefin Sulfonate (AOS)</h3>
  <div class="prod-aliases">Alpha-Olefin Sulfonate · CAS 68439-57-6</div>
  <div class="prod-variants">
@@ -169,7 +201,7 @@
  <a href="#quote" class="prod-cta">Request Quote</a>
  </div>
 
- <div class="prod-card">
+ <div class="prod-card" id="ammonium-lauryl-ether-sulfate-ales">
  <h3>Ammonium Lauryl Ether Sulfate (ALES)</h3>
  <div class="prod-aliases">AESA · Ammonium Laureth Sulfate · CAS 32612-48-9</div>
  <div class="prod-variants">
@@ -183,7 +215,7 @@
  <a href="#quote" class="prod-cta">Request Quote</a>
  </div>
 
- <div class="prod-card">
+ <div class="prod-card" id="ammonium-lauryl-sulfate-als">
  <h3>Ammonium Lauryl Sulfate (ALS)</h3>
  <div class="prod-aliases">LSA · Ammonium Dodecyl Sulfate · CAS 2235-54-3</div>
  <div class="prod-variants">
@@ -197,7 +229,7 @@
  <a href="#quote" class="prod-cta">Request Quote</a>
  </div>
 
- <div class="prod-card">
+ <div class="prod-card" id="sodium-lauryl-sulfate-sls">
  <h3>Sodium Lauryl Sulfate (SLS)</h3>
  <div class="prod-aliases">K12 · Sodium Dodecyl Sulfate · CAS 151-21-3</div>
  <div class="prod-variants">
@@ -221,7 +253,7 @@
  <h3><span class="ion">Amphoteric</span> Surfactants</h3>
  <div class="prod-grid">
 
- <div class="prod-card">
+ <div class="prod-card" id="cab-cocamidopropyl-betaine">
  <h3>CAB — Cocamidopropyl Betaine</h3>
  <div class="prod-aliases">CAPB · Cocobetaine · CAS 61789-40-0</div>
  <div class="prod-variants">
@@ -235,7 +267,7 @@
  <a href="#quote" class="prod-cta">Request Quote</a>
  </div>
 
- <div class="prod-card">
+ <div class="prod-card" id="cocamidopropyl-amine-oxide-cao">
  <h3>Cocamidopropyl Amine Oxide (CAO)</h3>
  <div class="prod-aliases">CAPAO · Cocamine Oxide · CAS 68155-09-9</div>
  <div class="prod-variants">
@@ -257,7 +289,7 @@
  <h3><span class="ion">Nonionic</span> Surfactants</h3>
  <div class="prod-grid">
 
- <div class="prod-card">
+ <div class="prod-card" id="fatty-acid-diethanolamide-cdea">
  <h3>Fatty Acid Diethanolamide (CDEA)</h3>
  <div class="prod-aliases">6501 · Coconut Diethanolamide · CAS 68603-42-9</div>
  <div class="prod-variants">
@@ -272,7 +304,7 @@
  <a href="#quote" class="prod-cta">Request Quote</a>
  </div>
 
- <div class="prod-card">
+ <div class="prod-card" id="coconut-monoethanolamide-cmea">
  <h3>Coconut Monoethanolamide (CMEA)</h3>
  <div class="prod-aliases">Coconut MEA · Cocamide MEA · CAS 68140-00-1</div>
  <div class="prod-variants">
@@ -286,7 +318,7 @@
  <a href="#quote" class="prod-cta">Request Quote</a>
  </div>
 
- <div class="prod-card">
+ <div class="prod-card" id="alkyl-polyglucosides-apg">
  <h3>Alkyl Polyglucosides (APG)</h3>
  <div class="prod-aliases">Alkyl Polyglycoside · CAS 68515-73-1</div>
  <div class="prod-variants">
@@ -302,7 +334,7 @@
  <a href="#quote" class="prod-cta">Request Quote</a>
  </div>
 
- <div class="prod-card">
+ <div class="prod-card" id="primary-alcohol-ethoxylate-aeo">
  <h3>Primary Alcohol Ethoxylate (AEO)</h3>
  <div class="prod-aliases">Alcohol Ethoxylate · Polyoxyethylene Alkyl Ether · CAS 68439-50-9</div>
  <div class="prod-variants">
@@ -317,7 +349,7 @@
  <a href="#quote" class="prod-cta">Request Quote</a>
  </div>
 
- <div class="prod-card">
+ <div class="prod-card" id="liquid-sodium-silicate">
  <h3>Liquid Sodium Silicate</h3>
  <div class="prod-aliases">Water Glass · Sodium Metasilicate Solution · CAS 1344-09-8</div>
  <div class="prod-variants">
@@ -344,7 +376,7 @@
 </section>
 
 <!-- Applications -->
-<section style="background: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<section id="applications" style="background: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
  <div class="container">
  <div class="section-label">Industry Applications</div>
  <h2 class="section-title">Where Surfactants Are Used</h2>
@@ -367,7 +399,7 @@
 </section>
 
 <!-- Documentation -->
-<section>
+<section id="documentation">
  <div class="container">
  <div class="section-label">Documentation</div>
  <h2 class="section-title">Documentation Available</h2>

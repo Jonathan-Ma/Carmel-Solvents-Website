@@ -51,6 +51,7 @@
  display: flex; flex-direction: column;
  }
  .prod-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.prod-card { scroll-margin-top: 5rem; }
  .prod-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 10px; }
  .prod-aliases { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px; line-height: 1.5; }
 
@@ -115,7 +116,15 @@
  </button>
  <ul class="nav-links" id="nav-links">
  <li><a href="../index.html#about">Philosophy</a></li>
- <li><a href="index.html">Products</a></li>
+ <li class="nav-dropdown">
+      <a href="carbonate-solvents.html" class="dropdown-toggle">Products ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="carbonate-solvents.html">Carbonate Solvents</a></li>
+        <li><a href="oleochemicals.html">Oleochemicals</a></li>
+        <li><a href="surfactants.html">Surfactants</a></li>
+        <li><a href="oem-odm-detergent-products.html">OEM/ODM</a></li>
+      </ul>
+    </li>
  <li><a href="../blog/">Blog</a></li>
  <li><a href="../index.html#contact">Contact</a></li>
  </ul>
@@ -131,8 +140,22 @@
  </div>
 </section>
 
+<!-- On this page -->
+<nav class="product-toc" aria-label="On this page">
+  <div class="container">
+    <span class="product-toc-label">On this page</span>
+    <ul class="product-toc-list">
+      <li><a href="#detergent-powder-washing-powder">Detergent Powder / Washing Powder</a></li>
+      <li><a href="#detergent-liquid-washing-liquid">Detergent Liquid / Washing Liquid</a></li>
+      <li><a href="#dishwashing-liquid">Dishwashing Liquid</a></li>
+      <li><a href="#laundry-detergent-pods">Laundry Detergent Pods</a></li>
+      <li><a href="#quote">Request a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
 <!-- How It Works -->
-<section>
+<section id="process">
  <div class="container">
  <div class="section-label">How It Works</div>
  <h2 class="section-title">Contract Manufacturing Process</h2>
@@ -172,7 +195,7 @@
  <div class="prod-grid">
 
  <!-- Detergent Powder -->
- <div class="prod-card">
+ <div class="prod-card" id="detergent-powder-washing-powder">
  <h3>Detergent Powder / Washing Powder</h3>
  <div class="prod-aliases">Laundry Powder · High-Foam / Low-Foam Options</div>
  <div class="prod-section">
@@ -198,7 +221,7 @@
  </div>
 
  <!-- Detergent Liquid -->
- <div class="prod-card">
+ <div class="prod-card" id="detergent-liquid-washing-liquid">
  <h3>Detergent Liquid / Washing Liquid</h3>
  <div class="prod-aliases">Liquid Laundry Detergent · HE Compatible</div>
  <div class="prod-section">
@@ -224,7 +247,7 @@
  </div>
 
  <!-- Dishwashing Liquid -->
- <div class="prod-card">
+ <div class="prod-card" id="dishwashing-liquid">
  <h3>Dishwashing Liquid</h3>
  <div class="prod-aliases">Hand Dishwashing Liquid · Manual Dishwash</div>
  <div class="prod-section">
@@ -250,7 +273,7 @@
  </div>
 
  <!-- Laundry Pods -->
- <div class="prod-card">
+ <div class="prod-card" id="laundry-detergent-pods">
  <h3>Laundry Detergent Pods</h3>
  <div class="prod-aliases">Unit-Dose Laundry · Laundry Capsules</div>
  <div class="prod-section">
@@ -284,7 +307,7 @@
 </section>
 
 <!-- Packaging -->
-<section>
+<section id="packaging">
  <div class="container">
  <div class="section-label">Packaging Capabilities</div>
  <h2 class="section-title">Packaging Options</h2>
@@ -339,7 +362,7 @@
 </section>
 
 <!-- Documentation -->
-<section>
+<section id="documentation">
  <div class="container">
  <div class="section-label">Documentation</div>
  <h2 class="section-title">Documentation Available</h2>

@@ -51,6 +51,7 @@
  display: flex; flex-direction: column;
  }
  .prod-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.prod-card { scroll-margin-top: 5rem; }
  .prod-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
  .prod-aliases { font-size: 0.8rem; color: var(--text-muted); margin-bottom: 14px; line-height: 1.5; }
  .prod-variants { margin-bottom: 14px; }
@@ -88,7 +89,15 @@
  </button>
  <ul class="nav-links" id="nav-links">
  <li><a href="../index.html#about">Philosophy</a></li>
- <li><a href="index.html">Products</a></li>
+ <li class="nav-dropdown">
+      <a href="carbonate-solvents.html" class="dropdown-toggle">Products ▾</a>
+      <ul class="dropdown-menu">
+        <li><a href="carbonate-solvents.html">Carbonate Solvents</a></li>
+        <li><a href="oleochemicals.html">Oleochemicals</a></li>
+        <li><a href="surfactants.html">Surfactants</a></li>
+        <li><a href="oem-odm-detergent-products.html">OEM/ODM</a></li>
+      </ul>
+    </li>
  <li><a href="../blog/">Blog</a></li>
  <li><a href="../index.html#contact">Contact</a></li>
  </ul>
@@ -104,8 +113,32 @@
  </div>
 </section>
 
+<!-- On this page -->
+<nav class="product-toc" aria-label="On this page">
+  <div class="container">
+    <span class="product-toc-label">On this page</span>
+    <ul class="product-toc-list">
+      <li><a href="#hydrogenated-rbd-palm-stearin">Hydrogenated RBD Palm Stearin</a></li>
+      <li><a href="#fatty-acid-ester-gms">Fatty Acid Ester — GMS</a></li>
+      <li><a href="#fatty-acid-ester-gml">Fatty Acid Ester — GML</a></li>
+      <li><a href="#glycerine">Glycerine</a></li>
+      <li><a href="#medicinal-glycerin">Medicinal Glycerin</a></li>
+      <li><a href="#palmitic-acid">Palmitic Acid</a></li>
+      <li><a href="#stearates">Stearates</a></li>
+      <li><a href="#fatty-acids-caprylic-capric-c12-14">Fatty Acids — Caprylic, Capric, C12-14</a></li>
+      <li><a href="#fatty-acids-unsaturated-c16-18-amp;-oleic-acid">Fatty Acids — Unsaturated C16-18 &amp; Oleic Acid</a></li>
+      <li><a href="#stearic-acid">Stearic Acid</a></li>
+      <li><a href="#dimer-acid">Dimer Acid</a></li>
+      <li><a href="#alcohol-soluble-polyamide-resin">Alcohol Soluble Polyamide Resin</a></li>
+      <li><a href="#benzene-soluble-polyamide-resin">Benzene Soluble Polyamide Resin</a></li>
+      <li><a href="#hot-melt-adhesive">Hot Melt Adhesive</a></li>
+      <li><a href="#quote">Request a Quote</a></li>
+    </ul>
+  </div>
+</nav>
+
 <!-- Product Grid -->
-<section>
+<section id="products">
  <div class="container">
  <div class="section-label">Product Catalog</div>
  <h2 class="section-title">Oleochemical Product Families</h2>
@@ -114,7 +147,7 @@
  <div class="prod-grid">
 
  <!-- 1. Hydrogenated RBD Palm Stearin -->
- <div class="prod-card">
+ <div class="prod-card" id="hydrogenated-rbd-palm-stearin">
  <h3>Hydrogenated RBD Palm Stearin</h3>
  <div class="prod-aliases">HRBDPS · Hydrogenated Palm Stearin</div>
  <div class="prod-variants">
@@ -129,7 +162,7 @@
  </div>
 
  <!-- 2. Fatty Acid Ester — GMS -->
- <div class="prod-card">
+ <div class="prod-card" id="fatty-acid-ester-gms">
  <h3>Fatty Acid Ester — GMS</h3>
  <div class="prod-aliases">Glyceryl Monostearate · Monoglyceride</div>
  <div class="prod-variants">
@@ -147,7 +180,7 @@
  </div>
 
  <!-- 3. Fatty Acid Ester — GML -->
- <div class="prod-card">
+ <div class="prod-card" id="fatty-acid-ester-gml">
  <h3>Fatty Acid Ester — GML</h3>
  <div class="prod-aliases">Glyceryl Monolaurate · Monolaurin</div>
  <div class="prod-variants">
@@ -162,7 +195,7 @@
  </div>
 
  <!-- 4. Glycerine — Pt Dua Kuda Indonesia -->
- <div class="prod-card">
+ <div class="prod-card" id="glycerine">
  <h3>Glycerine</h3>
  <div class="prod-aliases">Glycerol · 1,2,3-Propanetriol · CAS 56-81-5</div>
  <div class="prod-variants">
@@ -178,7 +211,7 @@
  </div>
 
  <!-- 5. Medicinal Glycerin -->
- <div class="prod-card">
+ <div class="prod-card" id="medicinal-glycerin">
  <h3>Medicinal Glycerin</h3>
  <div class="prod-aliases">Pharmaceutical Glycerin</div>
  <div class="prod-variants">
@@ -193,7 +226,7 @@
  </div>
 
  <!-- 6. Palmitic Acid -->
- <div class="prod-card">
+ <div class="prod-card" id="palmitic-acid">
  <h3>Palmitic Acid</h3>
  <div class="prod-aliases">C16 Fatty Acid · CAS 57-10-3</div>
  <div class="prod-variants">
@@ -208,7 +241,7 @@
  </div>
 
  <!-- 7. Stearates -->
- <div class="prod-card">
+ <div class="prod-card" id="stearates">
  <h3>Stearates</h3>
  <div class="prod-aliases">Metallic Stearates</div>
  <div class="prod-variants">
@@ -225,7 +258,7 @@
  </div>
 
  <!-- 8. Fatty Acids — C8 / C10 / C12-14 -->
- <div class="prod-card">
+ <div class="prod-card" id="fatty-acids-caprylic-capric-c12-14">
  <h3>Fatty Acids — Caprylic, Capric, C12-14</h3>
  <div class="prod-aliases">C8/C10/C12-14 Fatty Acids</div>
  <div class="prod-variants">
@@ -242,7 +275,7 @@
  </div>
 
  <!-- 9. Fatty Acids — Unsaturated C16-18 -->
- <div class="prod-card">
+ <div class="prod-card" id="fatty-acids-unsaturated-c16-18-amp;-oleic-acid">
  <h3>Fatty Acids — Unsaturated C16-18 &amp; Oleic Acid</h3>
  <div class="prod-aliases">Unsaturated Fatty Acids · Oleic Acid · CAS 112-80-1</div>
  <div class="prod-variants">
@@ -258,7 +291,7 @@
  </div>
 
  <!-- 10. Stearic Acid -->
- <div class="prod-card">
+ <div class="prod-card" id="stearic-acid">
  <h3>Stearic Acid</h3>
  <div class="prod-aliases">Octadecanoic Acid · CAS 57-11-4</div>
  <div class="prod-variants">
@@ -276,7 +309,7 @@
  </div>
 
  <!-- 11. Dimer Acid -->
- <div class="prod-card">
+ <div class="prod-card" id="dimer-acid">
  <h3>Dimer Acid</h3>
  <div class="prod-aliases">Dimerized Fatty Acid · CAS 61788-89-4</div>
  <div class="prod-variants">
@@ -294,7 +327,7 @@
  </div>
 
  <!-- 12. Polyamide Resin — Alcohol Soluble -->
- <div class="prod-card">
+ <div class="prod-card" id="alcohol-soluble-polyamide-resin">
  <h3>Alcohol Soluble Polyamide Resin</h3>
  <div class="prod-aliases">Co-Solvent Polyamide Resin</div>
  <div class="prod-variants">
@@ -311,7 +344,7 @@
  </div>
 
  <!-- 13. Polyamide Resin — Benzene Soluble -->
- <div class="prod-card">
+ <div class="prod-card" id="benzene-soluble-polyamide-resin">
  <h3>Benzene Soluble Polyamide Resin</h3>
  <div class="prod-aliases">Solvent-Based Polyamide Resin</div>
  <div class="prod-variants">
@@ -330,7 +363,7 @@
  </div>
 
  <!-- 14. Hot Melt Adhesive -->
- <div class="prod-card">
+ <div class="prod-card" id="hot-melt-adhesive">
  <h3>Hot Melt Adhesive</h3>
  <div class="prod-aliases">Polyamide Hot Melt · Thermoplastic Adhesive</div>
  <div class="prod-variants">
@@ -355,7 +388,7 @@
 </section>
 
 <!-- Applications -->
-<section style="background: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+<section id="applications" style="background: var(--bg-secondary); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
  <div class="container">
  <div class="section-label">Industry Applications</div>
  <h2 class="section-title">Where Oleochemicals Are Used</h2>
@@ -378,7 +411,7 @@
 </section>
 
 <!-- Documentation -->
-<section>
+<section id="documentation">
  <div class="container">
  <div class="section-label">Documentation</div>
  <h2 class="section-title">Documentation Available</h2>
