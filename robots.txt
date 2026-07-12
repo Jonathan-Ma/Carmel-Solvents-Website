@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.carmelsolv.com/sitemap.xml
+Sitemap: https://carmelsolv.com/sitemap.xml
 
 # AI crawler guidance
-# llms.txt: https://www.carmelsolv.com/llms.txt
+# llms.txt: https://carmelsolv.com/llms.txt

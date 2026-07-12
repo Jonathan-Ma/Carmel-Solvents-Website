@@ -18,12 +18,12 @@ Each blog post is a standalone HTML file in `/blog/` sharing the same layout tem
 ```html
 <title>Post Title | CARMELSOLV™</title>
 <meta name="description" content="1–2 sentence summary. Keep under 160 chars. Include primary keyword.">
-<link rel="canonical" href="https://www.carmelsolv.com/blog/post-slug.html">
+<link rel="canonical" href="https://carmelsolv.com/blog/post-slug.html">
 
 <meta property="og:title" content="Post Title | CARMELSOLV™">
 <meta property="og:description" content="Same summary for social previews.">
-<meta property="og:url" content="https://www.carmelsolv.com/blog/post-slug.html">
-<meta property="og:image" content="https://www.carmelsolv.com/images/...">
+<meta property="og:url" content="https://carmelsolv.com/blog/post-slug.html">
+<meta property="og:image" content="https://carmelsolv.com/images/...">
 <meta name="twitter:card" content="summary_large_image">
 ```
 
@@ -32,10 +32,10 @@ Each blog post is a standalone HTML file in `/blog/` sharing the same layout tem
 ```json
 {
   "@type": "BlogPosting",
-  "mainEntityOfPage": { "@id": "https://www.carmelsolv.com/blog/post-slug.html" },
+  "mainEntityOfPage": { "@id": "https://carmelsolv.com/blog/post-slug.html" },
   "headline": "Full post headline",
   "description": "Full description for schema",
-  "image": "https://www.carmelsolv.com/images/...",
+  "image": "https://carmelsolv.com/images/...",
   "datePublished": "2025-MM-DD",
   "dateModified": "2025-MM-DD",
   "author": { "@type": "Organization", "name": "CARMELSOLV" },
@@ -49,9 +49,9 @@ Each blog post is a standalone HTML file in `/blog/` sharing the same layout tem
 {
   "@type": "BreadcrumbList",
   "itemListElement": [
-    { "position": 1, "name": "Home", "item": "https://www.carmelsolv.com/" },
-    { "position": 2, "name": "Blog", "item": "https://www.carmelsolv.com/blog/" },
-    { "position": 3, "name": "Post Title", "item": "https://www.carmelsolv.com/blog/post-slug.html" }
+    { "position": 1, "name": "Home", "item": "https://carmelsolv.com/" },
+    { "position": 2, "name": "Blog", "item": "https://carmelsolv.com/blog/" },
+    { "position": 3, "name": "Post Title", "item": "https://carmelsolv.com/blog/post-slug.html" }
   ]
 }
 ```

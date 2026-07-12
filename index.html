@@ -17,12 +17,12 @@
   <title>CARMELSOLV™ | Carbonate Solvent Supplier &amp; Distributor USA</title>
   <meta name="description" content="CARMELSOLV™ is the U.S. specialist supplier and distributor of battery-grade and industrial carbonate solvents — DMC, PC, EC, EMC, DEC and more. Based in Jersey City, NJ.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.carmelsolv.com/">
+  <link rel="canonical" href="https://carmelsolv.com/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="CARMELSOLV™ | Carbonate Solvent Supplier &amp; Distributor USA">
   <meta property="og:description" content="U.S. specialist supplier of battery-grade and industrial carbonate solvents. DMC, PC, EC, EMC, DEC and more. Jersey City, NJ.">
-  <meta property="og:url" content="https://www.carmelsolv.com/">
+  <meta property="og:url" content="https://carmelsolv.com/">
   <meta property="og:type" content="website">
 
   <!-- Schema.org: Organization -->
@@ -32,7 +32,7 @@
     "@type": "Organization",
     "name": "Carmel Solvents Supply LLC",
     "alternateName": "CARMELSOLV",
-    "url": "https://www.carmelsolv.com",
+    "url": "https://carmelsolv.com",
     "email": "billwu@carmelsolv.com",
     "address": {
       "@type": "PostalAddress",
@@ -173,78 +173,222 @@
     <div class="contact-box">
       <div class="section-label" style="text-align:center;">Get in Touch</div>
       <h2>Request a Quote</h2>
-      <p>Tell us what you need and we'll get back to you with pricing, specs, and availability.</p>
-      <form action="https://formspree.io/f/xnjwgzdz" method="POST" class="contact-form">
+      <p>Fill out the form below and a CarmelSolv representative will review your requirements and contact you.</p>
+
+      <form id="rfq-form" action="https://formspree.io/f/xnjwgzdz" method="POST" class="contact-form" novalidate>
+        <p style="font-size:0.7rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--accent);margin-bottom:12px;">* Required fields</p>
+
+        <!-- Row 1: Name + Company -->
         <div class="form-row">
           <div class="form-group">
-            <label for="name">Name *</label>
-            <input type="text" id="name" name="name" required placeholder="Your name">
+            <label for="name">Full Name *</label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
           </div>
           <div class="form-group">
-            <label for="company">Company</label>
-            <input type="text" id="company" name="company" placeholder="Company name">
+            <label for="company">Company Name *</label>
+            <input type="text" id="company" name="company" required placeholder="Company name">
           </div>
         </div>
+
+        <!-- Row 2: Email + Phone -->
         <div class="form-row">
           <div class="form-group">
-            <label for="email">Email *</label>
-            <input type="email" id="email" name="email" required placeholder="your@email.com">
+            <label for="email">Business Email *</label>
+            <input type="email" id="email" name="email" required placeholder="your@company.com">
           </div>
           <div class="form-group">
-            <label for="phone">Phone</label>
+            <label for="phone">Phone <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-muted);">(optional)</span></label>
             <input type="tel" id="phone" name="phone" placeholder="Optional">
           </div>
         </div>
-        <div class="form-group">
-          <label for="product">Product of Interest</label>
-          <select id="product" name="product">
-            <option value="">Select a product...</option>
-            <option>Dimethyl Carbonate (DMC)</option>
-            <option>Propylene Carbonate (PC)</option>
-            <option>Ethylene Carbonate (EC)</option>
-            <option>Ethyl Methyl Carbonate (EMC)</option>
-            <option>Diethyl Carbonate (DEC)</option>
-            <option>Propylene Glycol (Industrial Grade)</option>
-            <option>Propylene Glycol (USP Grade)</option>
-            <option>Methyl Propionate</option>
-            <option>Ethyl Propionate</option>
-            <option>Propyl Propionate</option>
-            <option>Succinic Acid</option>
-            <option>Multiple / Other</option>
-          </select>
+
+        <!-- Row 3: Product Category + Product Name -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="product_category">Product Category *</label>
+            <select id="product_category" name="product_category" required>
+              <option value="">Select a category…</option>
+              <option>Carbonate Solvents</option>
+              <option>Surfactants</option>
+              <option>Oleochemicals</option>
+              <option>Personal Care Ingredients</option>
+              <option>Specialty Solvents</option>
+              <option>Food or Pharmaceutical Ingredients</option>
+              <option>OEM / ODM Manufacturing</option>
+              <option>Multiple Products</option>
+              <option>Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="product_name">Product Name or Requested Material *</label>
+            <input type="text" id="product_name" name="product_name" required placeholder="e.g., SLES 70%, GMS, DMC">
+          </div>
         </div>
-        <div class="form-group">
-          <label for="message">Message *</label>
-          <textarea id="message" name="message" required rows="4" placeholder="Describe your needs — quantity, grade, frequency, or any questions"></textarea>
+
+        <!-- Row 4: Quantity + Destination -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="quantity">Required Quantity *</label>
+            <input type="text" id="quantity" name="quantity" required placeholder="e.g., 500 kg, 2 drums, 1 pallet">
+          </div>
+          <div class="form-group">
+            <label for="destination">Delivery Destination *</label>
+            <input type="text" id="destination" name="destination" required placeholder="City, State, ZIP, or Port">
+          </div>
         </div>
-        <button type="submit" class="btn" style="width:100%;justify-content:center;">Send Request</button>
+
+        <!-- Row 5: Grade + Packaging (optional) -->
+        <div class="form-row">
+          <div class="form-group">
+            <label for="grade">Grade or Purity <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-muted);">(optional)</span></label>
+            <input type="text" id="grade" name="grade" placeholder="e.g., Industrial, USP, 99.5%">
+          </div>
+          <div class="form-group">
+            <label for="packaging">Packaging Preference <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-muted);">(optional)</span></label>
+            <input type="text" id="packaging" name="packaging" placeholder="e.g., Drums, IBC totes, bulk">
+          </div>
+        </div>
+
+        <!-- Row 6: Delivery Date (optional) -->
+        <div class="form-group" style="max-width:50%;">
+          <label for="delivery_date">Required Delivery Date <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-muted);">(optional)</span></label>
+          <input type="text" id="delivery_date" name="delivery_date" placeholder="e.g., Q3 2026, ASAP, by Aug 15">
+        </div>
+
+        <!-- Documentation Checkboxes -->
+        <div class="form-group">
+          <label>Documentation Requested <span style="font-weight:400;text-transform:none;letter-spacing:0;color:var(--text-muted);">(optional, select all that apply)</span></label>
+          <div class="checkbox-group">
+            <label class="checkbox-label"><input type="checkbox" name="docs" value="SDS"> SDS</label>
+            <label class="checkbox-label"><input type="checkbox" name="docs" value="TDS"> TDS</label>
+            <label class="checkbox-label"><input type="checkbox" name="docs" value="COA"> COA</label>
+            <label class="checkbox-label"><input type="checkbox" name="docs" value="Specification Sheet"> Specification Sheet</label>
+            <label class="checkbox-label"><input type="checkbox" name="docs" value="Regulatory Documents"> Regulatory Documents</label>
+            <label class="checkbox-label"><input type="checkbox" name="docs" value="None"> None</label>
+          </div>
+        </div>
+
+        <!-- Sample Checkbox -->
+        <div class="form-group">
+          <label class="checkbox-label" style="display:inline-flex;align-items:center;gap:8px;">
+            <input type="checkbox" name="sample" value="Yes"> Sample Requested
+          </label>
+        </div>
+
+        <!-- Message -->
+        <div class="form-group">
+          <label for="message">Message or Specifications *</label>
+          <textarea id="message" name="message" required rows="5" placeholder="Describe your requirements — application, specifications, timeline, or any questions"></textarea>
+        </div>
+
+        <!-- Success / Error messages -->
+        <div id="form-success" style="display:none;padding:20px;background:rgba(74,222,128,0.08);border:1px solid rgba(74,222,128,0.25);border-radius:var(--radius);margin-bottom:16px;text-align:center;">
+          <p style="color:#4ade80;margin:0;font-size:0.95rem;"><strong>Thank you.</strong> Your request has been submitted. A CarmelSolv representative will review the product, quantity, and delivery requirements and contact you using the information provided.</p>
+        </div>
+        <div id="form-error" style="display:none;padding:16px;background:rgba(248,113,113,0.08);border:1px solid rgba(248,113,113,0.25);border-radius:var(--radius);margin-bottom:16px;text-align:center;">
+          <p style="color:#f87171;margin:0;font-size:0.9rem;">There was a problem submitting your request. Please check your connection and try again, or email us directly at billwu@carmelsolv.com.</p>
+        </div>
+
+        <button type="submit" id="rfq-submit" class="btn" style="width:100%;justify-content:center;">Send Request</button>
       </form>
     </div>
   </div>
 </section>
 
-<!-- Footer -->
-<footer>
-  <div style="text-align: center; padding: 28px 24px; font-size: 0.85rem; color: var(--text-muted);">
-    <div>© 2026 Carmel Solvents Supply LLC. All Rights Reserved.</div>
-    <div style="margin-top: 6px;">111 Town Square Place, Suite 1201, Jersey City, NJ 07310</div>
-  </div>
-</footer>
+<style>
+  .checkbox-group { display:flex; flex-wrap:wrap; gap:8px 16px; }
+  .checkbox-label { font-size:0.85rem; color:var(--text-secondary); cursor:pointer; display:inline-flex; align-items:center; gap:6px; font-weight:400; text-transform:none; letter-spacing:0; }
+  .checkbox-label input[type="checkbox"] { accent-color:var(--accent); width:16px; height:16px; cursor:pointer; }
+  .form-group .required-star { color:var(--accent); }
+</style>
 
 <script>
-  const params = new URLSearchParams(window.location.search);
-  const product = params.get('product');
-  if (product) {
-    const select = document.getElementById('product');
-    if (select) {
-      for (const option of select.options) {
-        if (option.text.includes(product) || product.includes(option.value)) {
-          option.selected = true;
-          break;
-        }
-      }
-    }
+(function(){
+  var form = document.getElementById('rfq-form');
+  var submitBtn = document.getElementById('rfq-submit');
+  var successMsg = document.getElementById('form-success');
+  var errorMsg = document.getElementById('form-error');
+  var submitting = false;
+
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    if (submitting) return;
+
+    // Hide previous messages
+    successMsg.style.display = 'none';
+    errorMsg.style.display = 'none';
+
+    // Validate required fields
+    var required = form.querySelectorAll('[required]');
+    var valid = true;
+    required.forEach(function(field) {
+      if (!field.value.trim()) {
+        valid = false;
+        field.style.borderColor = '#f87171';
+      } else {
+        field.style.borderColor = '';
+      }
+    });
+
+    // Validate email
+    var email = document.getElementById('email');
+    if (email.value.trim() && !validateEmail(email.value.trim())) {
+      valid = false;
+      email.style.borderColor = '#f87171';
+    }
+
+    if (!valid) {
+      errorMsg.style.display = 'block';
+      errorMsg.querySelector('p').textContent = 'Please fill in all required fields with valid information.';
+      return;
+    }
+
+    // Prevent duplicate submissions
+    submitting = true;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending…';
+    submitBtn.style.opacity = '0.7';
+
+    // Submit via fetch
+    var data = new FormData(form);
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    })
+    .then(function(response) {
+      if (response.ok) {
+        form.style.display = 'none';
+        successMsg.style.display = 'block';
+        // Reset scroll position so user sees the message
+        successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        return response.json().then(function(json) {
+          throw json;
+        });
+      }
+    })
+    .catch(function(err) {
+      errorMsg.style.display = 'block';
+      errorMsg.querySelector('p').textContent = 'There was a problem submitting your request. Please check your connection and try again, or email us directly at billwu@carmelsolv.com.';
+      submitting = false;
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Send Request';
+      submitBtn.style.opacity = '1';
+    });
+  });
+
+  // Clear error styling on input
+  form.addEventListener('input', function(e) {
+    if (e.target.hasAttribute('required') || e.target.type === 'email') {
+      e.target.style.borderColor = '';
+    }
+  });
+})();
 </script>
 <script src="js/nav.js" defer></script>
 </body>
